@@ -137,9 +137,13 @@ int main(int argc, char *argv[])
 
 	// Cargar Datos -------------------------------------
 	i = 0;
+	ifstream inn("datos.txt");
+
 	do
 	{
-		fscanf(in,"%f,%f\n",&OData[0][i],&OData[1][i]);
+
+		fscanf(in,"%f %f\n",&OData[0][i],&OData[1][i]);
+		//printf("%f %f\n", OData[0][i], OData[1][i]);
 		i++;
 	} while (i<n);
 
